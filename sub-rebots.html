@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- google font -->
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&family=Raleway:wght@500;700;800&display=swap" rel="stylesheet">
+<!-- custom css -->
+<link rel="stylesheet" href="css/layout.css">
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/98cb98bc89.js" crossorigin="anonymous"></script>
+<!-- ease scroll -->
+<script src="vender/jquery.easeScroll.js"></script>
+<title>KIM HYUNJU PORTFOLIO</title>
+</head>
+<body>
+<!-- top image -->
+<div class="top-img">
+	<div class="imgwrap" style="background-color: #e1bfbd;">
+		<img src="images/rebots-big.jpg" alt="">
+	</div>
+	<h2 class="top-title">Rebots</h2>
+</div>
+<div class="sub-transparent"></div>
+<!-- header -->
+<header class="header">
+	<div class="wrap clearfix">
+		<h1 class="logo">ㄱㅎㅈ</h1>
+		<ul class="gnb">
+			<li><span onclick="location.href='index.html'">PORTFOLIO-LIST</span></li>
+		</ul>
+	</div>
+</header>
+<!-- content -->
+<div class="content">
+	<div class="wrap clearfix">
+		<div class="navigation">
+			<a href="#" class="back-btn">Portfolio</a>&nbsp;&gt;&nbsp;<span class="current-page">Rebots</span>
+		</div>
+		<div class="content-txt clearfix">
+			<h3 class="title">Rebots</h3>
+			<ul class="desc">
+				<li><i class="fas fa-globe"></i> 반응형 웹사이트</li>
+				<li><i class="fas fa-calendar"></i> 2020</li>
+				<li><i class="fas fa-paint-brush"></i> 디자인 100%</li>
+				<li><i class="fas fa-code"></i> 퍼블리싱 100%</li>
+			</ul>
+			<div class="shortcut">
+				<a href="#" class="shortcut-btn">바로가기</a>
+			</div>
+		</div>
+		<div class="content-scrshot">
+			<div class="imgwrap">
+				<img src="images/scr_rebots01.png" alt="">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- footer -->
+<div class="footer">
+	<div class="wrap">
+		<span class="copyright">ⓒ 2020 Kim Hyunju</span>
+	</div>
+</div>
+</body>
+<script>
+$(document).ready(function(){
+
+    /* 부드러운 스크롤 */
+    $('html').easeScroll();
+
+	/* 인덱스영역 효과 */
+    var screenHeight = $('.content').offset().top;
+    $(window).scroll(function(){
+
+    	// 스크롤시 헤더색상 변화
+        if($(this).scrollTop()>=screenHeight){
+            $('.header').addClass('filled');
+        }else {
+            $('.header').removeClass('filled');
+        }
+
+        // 스크롤시 상단 글자 페이드아웃
+        var percentage = ($(this).scrollTop()/(screenHeight/2));
+        $('.top-img .top-title').css('opacity',1-percentage);
+        
+    });
+
+})
+</script>
+</html>

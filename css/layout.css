@@ -1,0 +1,178 @@
+/* reset */
+* {margin: 0; padding: 0; box-sizing: border-box;}
+::selection {background: #3e59a8; color: #fff;}
+body {font-family: 'Raleway', 'Noto Sans KR', sans-serif; font-size: 14px; color: #373b4f; background-color: #f0f2f4;}
+ul {list-style: none;}
+a {text-decoration: none; color: #373b4f; transition: 0.3s;}
+a:hover {color: #3e59a8;}
+
+/* common */
+.wrap {width: 1250px; margin: 0 auto;}
+.clearfix::after {content: ''; display: block; clear: both;}
+.section {padding: 80px 0; background-color: #fff;}
+/*.section-title {font-family: 'Crimson Text', serif; font-weight: normal; font-size: 50px; letter-spacing: 5px;}*/
+.section-title {font-weight: 900; font-size: 50px; text-align: left; letter-spacing: 0.5px; margin-bottom: 30px;}
+
+
+/* index video */
+#indexVideo {position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
+.indeximg {width: 100%; height: 100vh; background-image: url('../images/windyday.jpg'); background-repeat: no-repeat; position: relative; overflow: hidden;}
+.video-box {position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
+.video-box video {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%;}
+.darkfilter {position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.3); top: 0; left: 0;}
+.darkfilter img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+
+.transparent {width: 100%; height: 100vh; background: transparent;}
+
+/* header */
+/*.header {background: #f0f2f4; padding: 18px 0; height: 80px; width: 100%;}*/
+.header {position: fixed; top: 0; left: 0; background: transparent; padding: 20px 0; height: 80px; width: 100%; color: #fff; transition: 0.3s; z-index: 990;}
+.header .logo {float: left;}
+.header .gnb {float: right; margin-top: 11px;}
+.header .gnb::after {content: ''; display: block; clear: both;}
+.header .gnb li {float: left; font-size: 16px; margin-left: 20px; cursor: pointer;}
+.header .gnb li span {color: #fff; font-weight: bold;}
+.header.filled {background: rgba(240,242,244,0.8);}
+.header.filled .logo {color: #373b4f;}
+.header.filled .gnb li span {color: #373b4f;}
+
+/* portfolio */
+.portfolio {background-color: #f0f2f4; /*#3e59a8;*/}
+/*.portfolio .section-title {color: #fff;}*/
+.portfolio .portfolio-list::after {content: ''; display: block; clear: both;}
+.portfolio .portfolio-list .list-item {float: left; width: 33.333%; padding: 10px; margin-bottom: 20px;}
+.portfolio .portfolio-list .list-item:nth-child(3n-2) {transform: translateX(-10px);}
+.portfolio .portfolio-list .list-item:nth-child(3n) {transform: translateX(10px);}
+.portfolio .portfolio-list .list-item .box {display: block; border-radius: 7px; overflow: hidden; transition: 0.3s;}
+.portfolio .portfolio-list .list-item:hover .box {transform: translateY(-10px); box-shadow: 0 0 20px rgba(45,56,89,0.4);}
+.portfolio .portfolio-list .list-item .img-area {width: 100%; position: relative; height: 260px; /*border: 1px solid #eee; border-bottom: 0; border-radius: 7px 7px 0 0; overflow: hidden;*/}
+.portfolio .portfolio-list .list-item .img-area img {display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.portfolio .portfolio-list .list-item .text-area {width: 100%; min-height: 65px; padding: 20px 15px; background-color: #fff; /*border: 1px solid #eee; border-top: 0; border-radius: 0 0 7px 7px;*/ transition: 0.5s;}
+.portfolio .portfolio-list .list-item .text-area .title {font-size: 22px; font-weight: 500; line-height: 1; margin-bottom: 8px;}
+.portfolio .portfolio-list .list-item .text-area .desc {font-size: 13px; color: #9d9db3;}
+
+.portfolio .portfolio-list .list-item:hover .text-area.rebots {background-color: #ffa09f;}
+.portfolio .portfolio-list .list-item:hover .text-area.teuk {background-color: #95d4cc;}
+
+/* profile */
+.profile h3 {font-size: 28px; font-weight: bold;}
+.profile .my-picture {float: left; width: 33.333%; padding-right: 15px;}
+.profile .my-picture .picwrap {width: 100%; border-radius: 7px; overflow: hidden;}
+.profile .my-picture .picwrap img {width: 100%;}
+
+.profile .my-info {float: left; width: 66.666%; padding-left: 15px;}
+.profile .my-info .profile-detail {padding: 10px 0;}
+.profile .my-info .profile-detail .subject {font-size: 17px; font-weight: 500; color: #3e59a8;}
+.profile .my-info .profile-detail .desc {font-size: 16px;}
+.profile .my-info .profile-detail .desc .date {color: #9d9db3; padding-right: 6px;}
+.profile .my-info .profile-detail .desc .email {font-size: 25px;}
+
+
+/* footer */
+.footer {background: #f0f2f4; padding: 30px 0; text-align: center; font-size: 12px;}
+
+
+/** 반응형 **/
+@media screen and (max-width: 1300px) {
+	.wrap {width: 990px}
+
+	.portfolio .portfolio-list .list-item {width: 50%; padding: 3px}
+	.portfolio .portfolio-list .list-item:nth-child(3n-2) {transform: translateX(0px);}
+	.portfolio .portfolio-list .list-item:nth-child(3n) {transform: translateX(0px);}
+	.portfolio .portfolio-list .list-item:nth-child(2n-1) {transform: translateX(-3px);}
+	.portfolio .portfolio-list .list-item:nth-child(2n) {transform: translateX(3px);}
+
+	.portfolio .portfolio-list .list-item .img-area {overflow: hidden;}
+	.portfolio .portfolio-list .list-item .img-area img {width: 100%;}
+
+	.profile .my-picture {width: 50%; padding-right: 6px;}
+	.profile .my-info {width: 50%; padding-left: 15px;}
+}
+
+@media screen and (max-width: 1030px) {
+	.wrap {width: 768px}
+
+	.portfolio .portfolio-list .list-item {margin-bottom: 10px;}
+
+	.portfolio .portfolio-list .list-item .img-area {height: 200px;}
+}
+
+@media screen and (max-width: 800px) {
+	.wrap {width: 98%;}
+
+	.section {padding: 40px 0;}
+
+	.section-title {font-size: 40px;}
+
+	.portfolio .portfolio-list .list-item {padding: 0; margin-bottom: 5px;}
+	.portfolio .portfolio-list .list-item:nth-child(2n-1) {transform: translateX(0); padding-right: 2px}
+	.portfolio .portfolio-list .list-item:nth-child(2n) {transform: translateX(0); padding-left: 2px;}
+
+	.portfolio .portfolio-list .list-item .img-area {height: 0; padding-bottom: 52%;}
+
+	.portfolio .portfolio-list .list-item .text-area {padding: 15px 8px;}
+	.portfolio .portfolio-list .list-item .text-area .title {font-size: 16px; margin-bottom: 0;}
+	.portfolio .portfolio-list .list-item .text-area .title span {display: inline-block; width: 100%; height: 18px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+	.portfolio .portfolio-list .list-item .text-area .desc {font-size: 11px;}
+
+	.profile h3 {font-size: 22px;}
+	.profile .my-info {padding-left: 5px;}
+	.profile .my-info .profile-detail .subject {font-size: 15px;}
+	.profile .my-info .profile-detail .desc {font-size: 14px;}
+}
+
+@media screen and (max-width: 640px) {
+	.profile .my-picture {display: none;}
+	.profile .my-info {width: 100%; padding: 0;}
+}
+
+
+
+/*** 서브 페이지 ***/
+/* top image */
+.top-img {position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 380px;}
+.top-img .imgwrap {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+.top-img .imgwrap img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.top-img .top-title {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; font-weight: 800; color: #fff; text-align: center; text-shadow: 0 0 4px rgba(0,0,0,0.1);}
+
+.sub-transparent {width: 100%; height: 380px; background: transparent;}
+
+/* content */
+.navigation {color: #a5a8b6; font-weight: bold; margin-bottom: 25px;}
+.navigation .back-btn {color: #a5a8b6;}
+.navigation .current-page {color: #373b4f;}
+
+.content {padding: 80px 0; background-color: #f0f2f4;}
+.content .content-txt {width: 30%; padding-right: 10px; float: left;}
+.content .content-txt .title {font-size: 40px; font-weight: 800; margin-bottom: 10px; line-height: 1.2;}
+.content .content-txt .desc li {min-height: 20px; padding: 4px 0;}
+.content .content-txt .desc li i {width: 17px; color: #3e59a8;}
+.content .content-txt .shortcut {width: 100%;}
+.content .content-txt .shortcut .shortcut-btn {display: inline-block; width: 100%; margin-top: 10px; padding: 15px; border-radius: 7px; background-color: #3e59a8; color: #fff; text-align: center;}
+.content .content-scrshot {width: 70%; float: left;}
+.content .content-scrshot img {max-width: 100%;}
+
+/** 반응형 **/
+@media screen and (max-width: 800px) {
+	.top-img, .sub-transparent {height: 300px;}
+
+	.top-img .top-title {font-size: 35px;}
+
+	.content {padding: 40px 0;}
+	.content .content-txt {width: 100%; padding-right: 0; float: none; margin-bottom: 10px;}
+	.content .content-txt .title {float: left; width: 75%;}
+	.content .content-txt .desc {float: right; width: 20%;}
+	.content .content-txt .shortcut {clear: both;}
+
+	.content .content-scrshot {width: 100%; float: none;}
+}
+
+@media screen and (max-width: 640px) {
+	.top-img, .sub-transparent {height: 200px;}
+
+	.top-img .top-title {font-size: 22px;}
+
+	.content .content-txt .title {width: 65%; font-size: 32px; padding-right: 10px;}
+	.content .content-txt .desc {width: 35%;}
+
+}
