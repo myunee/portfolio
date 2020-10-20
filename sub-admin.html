@@ -17,11 +17,11 @@
 </head>
 <body>
 <!-- top image -->
-<div class="top-img">
-	<div class="imgwrap" style="background-color: #e1bfbd;">
-		<img src="images/rebots-big.jpg" alt="">
+<div class="top-img" style="background-color: #616c80;">
+	<div class="imgwrap">
+		<img src="images/admin-big.jpg" alt="">
 	</div>
-	<h2 class="top-title">Rebots</h2>
+	<h2 class="top-title">관리자페이지</h2>
 </div>
 <div class="sub-transparent"></div>
 <!-- header -->
@@ -37,10 +37,10 @@
 <div class="content">
 	<div class="wrap clearfix">
 		<div class="navigation">
-			<a href="#" class="back-btn">Portfolio</a>&nbsp;&gt;&nbsp;<span class="current-page">Rebots</span>
+			<a href="#" class="back-btn">Portfolio</a>&nbsp;&gt;&nbsp;<span class="current-page">관리자페이지</span>
 		</div>
-		<div class="content-txt clearfix">
-			<h3 class="title">Rebots</h3>
+		<div class="content-txt">
+			<h3 class="title">관리자페이지</h3>
 			<ul class="desc">
 				<li><i class="fas fa-globe"></i> 반응형 웹사이트</li>
 				<li><i class="fas fa-calendar"></i> 2020</li>
@@ -85,7 +85,7 @@ $(document).ready(function(){
         // 스크롤시 상단 글자 페이드아웃
         var percentage = ($(this).scrollTop()/(screenHeight/2));
         $('.top-img .top-title').css('opacity',1-percentage);
-        
+         
     });
 
 })
