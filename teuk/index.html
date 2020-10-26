@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>신년맞이 특가할인</title>
+<!-- google font -->
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500&display=swap" rel="stylesheet">
+<!-- css animation -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<!-- style css -->
+<link rel="stylesheet" href="style_edit.css">
+</head>
+<body>
+<header>
+    <div class="wrap">
+        <div class="text">이벤트 마감임박 <span class="text-primary"><span id="hour"></span>:<span id="min"></span>:<span id="sec"></span></span> 남았습니다.</div>
+        <div class="menu" id="goResv2"><button class="btn" type="button">신청</button></div>
+    </div>
+</header>
+<!--신년맞이 한정 특가-->
+<div class="section section1">
+    <div class="titleimg"><img src="images/section1-title.png" alt=""></div>
+    <div class="inner">
+        <img src="images/phone.png" alt="" class="phone animated fadeIn">
+        <img src="images/fireworks.png" alt="" class="fireworks animated fadeIn" style="animation-delay: 0.5s;">
+    </div>
+    <div class="sell-count">
+        <img src="images/sell-count.png" alt="">
+        <span class="count-num counter">276</span>
+    </div>
+</div>
+
+<div class="section section2">
+    <div class="top-bar"><img src="images/section2-bar.png" alt=""></div>
+    <div class="wrap">
+        <div class="inner1">
+            <img src="images/section2-info.png" alt="">
+            <span class="today">02월 18일</span>
+        </div>
+        <div class="phonelist">
+            <img src="images/phone-list.png" alt="">
+        </div>
+        <div class="caution">위 프로모션 금액은 SKT, 5GX 프라임요금제 사용시 공시지원금 32만원 + 추가지원 4.8만원, 하나카드 SKT T-Zero 카드 실적 달성시 단말기 할부할인 2.4만원x24개월 57만원 사용하셨던 중고 스마트폰 매입가 16만 500원 기준이며 KT, LGU+ 변동 문제가 있을수 있습니다. 사용하고 계신 중고 스마트폰 또는 통신사 정책 월 요금에 따라 가격변동이 있을 수 있습니다. +단말기 미개봉 상태인 경우 반품이 가능합니다. 단, 단말기 수령후 포장박스 개봉 및 상품훼손, 고객 부주의로 인한 파손은 상품교환/반품이 불가합니다. (온라인 특성 상 미개봉 상품의 경우 확인이 어려우니 고객센터로 문의주시기 바랍니다)
+</div>
+    </div>
+</div>
+
+<!--예약-->
+<div class="section section3">
+    <div class="wrap">
+        <div class="title">이벤트 신청하기</div>
+        <div class="reserve">
+            <form>
+                <div class="form-group">
+                    <label class="label">예약자 성함</label>
+                    <input type="text" class="form-control" name="" value="">
+                </div>
+                <div class="form-group">
+                    <label class="label">현재 통신사</label>
+                    <select name="" id="" class="form-control">
+                            <option value="">SKT</option>
+                            <option value="">KT</option>
+                            <option value="">LG U+</option>
+                            <option value="">알뜰폰</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label">휴대폰번호
+                        <!-- 인증비용 안내 -->
+                        <span style="font-size: 13px; color: #59cdff; padding-left: 6px;">인증비용은 무료입니다.</span>
+                    </label>
+                    <div class="cont-float">
+                        <input type="text" class="form-control" name="" value="" placeholder="하이픈( - )을 제외하고 입력해주세요." style="width: 80%">
+                        <button class="btn" style="width: 20%">인증하기</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="label">인증번호 입력</label>
+                    <input type="text" class="form-control" name="" value="">
+                </div>
+                <div class="form-group">
+                    <label class="label">희망기종</label>
+                    <select name="" id="" class="form-control">
+                            <option value="">갤럭시 Note10</option>
+                            <option value="">갤럭시 Note10+</option>
+                            <option value="">LG V50S ThinQ</option>
+                            <option value="">갤럭시 A90</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p class="text-sky notosans">* 미성년자/신용불량자는 참여 불가능한 이벤트입니다.</p>
+                    <input type="checkbox" class="ck" name="" value="" id="check">
+                    <label class="ck-text notosans" for="check">개인정보 활용에 동의합니다.</label>
+                </div>
+                <div class="form-group">
+                    <button class="btn">확인</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- go top -->
+<div class="go-top" id="top"><a href="#"><img src="images/top.png" alt=""></a></div>
+<!-- / go top -->
+<!-- 신청하기 버튼 -->
+<div class="fixed-btn">
+    <button class="btn" id="goResv">신청하기</button>
+</div>
+<!-- / 신청하기 버튼 -->
+
+<!-- 스크립트 -->
+<!-- jquery -->
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+<!-- waypoint (스크롤시 해당위치서 실행) -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<!-- 판매대수 count -->
+<script src="js/jquery.counterup.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    // go top
+    $('#top').click(function(){
+        $('html').animate({scrollTop:0}, 400);
+    });
+
+    // go 신청하기
+    $('#goResv, .phonelist, #goResv2').click(function(){
+        var height = $('.section3').offset();
+        $('html').animate({scrollTop:height.top}, 300);
+    });
+
+    // 판매대수 count
+    $('.counter').counterUp({
+        time: 2000
+    });
+
+    // 스크롤감지
+    $(window).scroll(function(){
+        var top = $(this).scrollTop();
+
+        if(top>0){
+            $('header').addClass('fixed')
+        }else{
+            $('header').removeClass('fixed');
+        }
+    })
+
+    // 타이머 스크립트
+    /* 초기값 설정 */
+    var hour = 6;
+    var min = 1;
+    var sec = 5;
+
+    /* 숫자가 0보다 작을경우 */
+    if(hour<10){
+        $('#hour').html('0' + hour);
+    }
+    if(min<10){
+        $('#min').html('0' + min);
+    }
+    if(sec<10){
+        $('#sec').html('0' + sec);
+    }
+
+    /* 타이머 */
+    var timer = setInterval(function(){
+        $('#hour').html(hour);
+        $('#min').html(min);
+        $('#sec').html(sec);
+
+        if(sec == 0 && min == 0 && hour == 0){
+            alert('타이머 종료.');
+            clearInterval(timer); /* 타이머 종료 */
+        }else{
+            sec--;
+            if(sec<10){
+                $('#sec').html('0' + sec);
+            }
+            // 분처리
+            if(sec == 0){
+                min--;
+                sec = 59;
+            }
+            if(min<10){
+                $('#min').html('0' + min);
+            }
+
+            //시간처리
+            if(min == 0){
+                if(hour > 0){
+                    hour--;
+                    min = 59;
+                }
+            }
+            if(hour<10){
+                $('#hour').html('0' + hour);
+            }
+        }
+    }, 1000);
+
+})
+</script>
+</body>
+</html>
