@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Noto+Sans+KR&display=swap');
+* {padding: 0; margin: 0; box-sizing:border-box; -webkit-tap-highlight-color: rgba(0,0,0,0.1);}
+*:focus {outline:none;}
+body {font-family: 'Noto Sans KR', sans-serif; color: #333; font-size: 14px; letter-spacing: -0.5px; background-color: #1b1f21; background-image:url(../img/bg.png);}
+li {list-style:none}
+a {color:#333; text-decoration: none;}
+a:hover {color:#333;}
+a:focus {color: #333;}
+h1,h2,h3,h4,h5,h6 {font-weight: normal;}
+input {font-family: inherit;}
+button {font-family:inherit; cursor:pointer}
+
+.wrap {width:1000px; margin:0 auto}
+
+header {width:100%; height: 60px; background:#282d31; position:fixed; top:0; left: 0; z-index:999}
+header .wrap {position: relative;}
+.menu {position: absolute; top:0; left:0; height: 60px; width: 60px; cursor:pointer}
+.menu .bar {width:28px; height:3px; display: block; background: #fff; position: absolute;}
+.menu .bar1 {top:18px}
+.menu .bar2 {top:28px; width: 22px}
+.menu .bar3 {top:38px;}
+header h1 {text-align: center;}
+header h1 img {display:inline-block; height: 50px; margin-top: 5px;}
+.search_icon {position: absolute; font-size: 20px; top:0; right:0; height: 60px; width: 40px; line-height: 60px; text-align: right;}
+.search_icon i {color: #fff;}
+.hidden_head {height: 60px; width:100%;}
+
+.slide_menu {width:320px; height:100%; background: #222; position:fixed; top:0; left:-320px; z-index:9999; transition:0.3s}
+.slide_menu .menu_close {position: absolute; top:0; left:0; cursor:pointer; width: 60px; height: 60px;}
+.slide_menu .menu_close .x_bar {display: block; width:30px; height: 3px; background: #fff; position: absolute;}
+.slide_menu .menu_close .x_bar1 {transform:rotate(45deg); top:28px; left:15px}
+.slide_menu .menu_close .x_bar2 {transform:rotate(-45deg); top:28px; left:15px}
+.slide_menu .menu_list {margin-top: 60px;}
+.slide_menu .menu_list * {color: #fff; }
+.slide_menu .menu_list > ul > li > .menu_area {display: block; transition:0.2s;}
+.slide_menu .menu_list > ul > li > .menu_area a {display: block;  padding:12px 30px; transition:0.2s; word-break:break-all; font-size: 15px;}
+.slide_menu .menu_list > ul > li > .menu_area:hover {background: #556ce3;}
+.submenu_list li {padding:12px 35px 12px 20px; background: #333; border-bottom: 1px solid #444;}
+.slide_menu_bg {position: fixed; top: 0; left: 0; width:100%; height:100%; background: rgba(0,0,0,0.8); z-index:9998; transition:0.3s; opacity:0; visibility:hidden}
+.slide_menu.show_menu {left:0}
+.slide_menu_bg.show_menu {opacity:1; visibility:visible}
+
+.main_slider {width: 100%;}
+.main_slider img {width:100%}
+
+.main_gamelist {background: rgba(255,255,255,0.1); padding: 30px 0}
+.main_gamelist .title_box {text-align: center; padding:0 0 10px; position: relative;}
+.main_gamelist .title_box h2 {display:inline-block; padding: 10px 25px; border-radius: 50px; color: #00bcd4; font-weight: bold; font-size: 17px; border: 3px solid #00bcd4; overflow: hidden; line-height: 1.2;}
+
+.main_gamelist .game_list ul::after {content: ""; display: block; clear: both;}
+.main_gamelist .game_list ul li {float: left; width: 49%; margin: 0.5%}
+.main_gamelist .game_list .game_box {width: 100%; padding: 15px; background: #575b5d; box-shadow: 0 0 3px rgba(0,0,0,0.1); border-radius: 8px; transition:0.3s}
+.main_gamelist .game_list .game_box:hover {box-shadow:0 0 10px rgba(0,0,0,0.6)}
+.main_gamelist .game_list .game_box::after {content:""; display: block; clear: both;}
+.main_gamelist .game_list .game_box .imgwrap {width: 110px; height:110px; overflow:hidden; border-radius:10px; position:relative; float:left}
+.main_gamelist .game_list .game_box .imgwrap img {position: absolute; width: 100%; height: 100%; top:50%; left: 50%; transform: translate(-50%,-50%)}
+.main_gamelist .game_list .game_box .textwrap {padding-top: 0; overflow: hidden; float: left; padding-left: 10px; width: calc(100% - 120px)}
+.main_gamelist .game_list .game_box .textwrap h3 {white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color: #fff;}
+.main_gamelist .game_list .game_box .textwrap .company {font-size: 12px; color: #aaa; position: relative; padding-bottom: 6px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.main_gamelist .game_list .game_box .textwrap .company::after {content:""; display:block; width:15px; height: 12px; top:0; left: 0; background: transparent; border-bottom:1px solid #aaa;}
+.main_gamelist .game_list .game_box .textwrap .desc {white-space:nowrap; overflow:hidden; text-overflow:ellipsis; color: #fff;}
+
+.main_gamelist .all_view {text-align: center; margin-top: 35px;}
+.main_gamelist .all_view .btn {width: 99%; background: #00bcd4; border:0; padding:12px; color: #fff; font-size: 16px; border-radius:8px; transition:0.3s;}
+.main_gamelist .all_view .btn:hover {box-shadow:0 0 6px rgba(0,0,0,0.6);}
+.main_gamelist .all_view .btn:focus {background: #00a0b4;}
+
+.all_game {background: rgba(255,255,255,0.05)}
+.all_game .title_box h2 {color: #556ce3; border: 3px solid #556ce3;}
+.all_game .all_view .btn {background: #556ce3;}
+.all_game .all_view .btn:hover {box-shadow:0 0 6px rgba(0,0,0,0.6)}
+.all_game .all_view .btn:focus {background: #485cc1;}
+
+.lower_banner {padding: 60px 0 80px;}
+.lower_banner .wrap::after {content: ""; display: block;clear: both;}
+.lower_banner .low_ban {display: block; float: left; width:49.5%; border-radius:8px; overflow:hidden; margin:0 0.25%;}
+.lower_banner .low_ban img {display: block; width: 100%;}
+
+footer {border-top: 1px solid #444; text-align: center; padding:35px 0 45px; background-color: #282d31;}
+footer .logo img {vertical-align: middle; height: 30px;}
+footer .company_info {font-size: 12.5px; color: #fff;}
+footer .company_info .gray_bar {color:#bbb; padding:0 8px;}
+
+@media screen and (max-width:1100px) {
+	.wrap {width: 96%;}
+	.main_gamelist .title_box {padding:0 0 15px;}
+	.main_gamelist .all_view {margin-top:10px;}
+}
+
+@media screen and (max-width: 767px) {
+	header {height: 50px;}
+	header h1 img {height: 40px; margin-top: 5px;}
+	.hidden_head {height: 50px;}
+	.menu .bar1 {top:14px}
+	.menu .bar2 {top:24px; width: 20px;}
+	.menu .bar3 {top: 34px;}
+	.search_icon {line-height: 50px;}
+
+	.main_gamelist .game_list .game_box {padding: 10px}
+	.main_gamelist .game_list .game_box::after {content:""; display: block; clear: both;}
+	.main_gamelist .game_list .game_box .imgwrap {width:110px; height:110px; padding-bottom: 0; float:left}
+	.main_gamelist .game_list .game_box .textwrap {float: left; padding-top: 0; padding-left:10px; width:calc(100% - 120px)}
+	.main_gamelist .game_list ul li {width: 49%; margin: 0.5%}
+
+	.lower_banner {padding:20px 0 0}
+	.lower_banner .low_ban {float: none; width:100%; margin:0; margin-bottom: 20px;}
+}
+
+@media screen and (max-width: 640px) {
+	.main_gamelist .game_list ul li {width: 100%}
+
+	.lower_banner {padding:10px 0 0}
+	.lower_banner .low_ban {margin-bottom: 10px;}
+}
+
+@media screen and (max-width: 480px) {
+	.main_gamelist .game_list ul li {width: 100%; margin:4px 0}
+	.main_gamelist .title_box {padding:0 0 10px}
+	.main_gamelist .title_box h2 {font-size: 15px;}
+	.main_gamelist .title_box::before {display: none;}
+	.main_gamelist .title_box::after {display: none;}
+	.main_gamelist .all_view .btn {font-size: 15px;}
+
+	footer .logo img {height:26px}
+}
+
+/*서브*/
+.top_media {background:rgba(0,0,0,0.4)}
+
+.video {position: relative; width:100%; height: 0; padding-bottom: 56.25%;}
+.video > iframe {display: block; position: absolute; width: 100%!important; height: 100%; top: 0; left:0;}
+
+.image {width:100%;}
+.image > img {display: block; width:100%;}
+
+.sub_reservation {background: rgba(85,108,227,0); padding: 30px 0}
+.sub_reservation .title_box {text-align: center; padding:0 0 10px; position: relative;}
+.sub_reservation .title_box h2 {display:inline-block; padding: 10px 25px; border-radius: 50px; color: #00bcd4; font-weight: bold; font-size: 17px; border: 3px solid #00bcd4; overflow: hidden; line-height: 1.2;}
+
+.game_summary {background:rgba(85,145,227,0.12); padding: 15px; border-radius: 8px}
+.game_summary * {color: #fff;}
+.major_cont::after {content: ""; display: block; clear: both;}
+.major_cont .imgwrap {width: 160px; height: 160px; position: relative; float: left; overflow:hidden; border-radius:10px}
+.major_cont .imgwrap img {width:100%; height: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.major_cont .textwrap {float: left; margin-left: 10px; width: calc(100% - 170px)}
+.major_cont .textwrap .summary_area {padding-bottom: 10px;}
+.major_cont .textwrap .summary_area .summary_title {font-weight: normal; font-size: 22px;}
+.major_cont .textwrap .summary_area .summary_title br {display:none;}
+.major_cont .textwrap .summary_area .summary_title .company {color: #aaa; padding-left: 5px; font-size: 14px;}
+.major_cont .textwrap .summary_area .desc {font-size: 16px;}
+.major_cont .textwrap .summary_area .summary_data {display:inline-block; color: #ff643a; padding-top: 5px;}
+/*.major_cont .textwrap .summary_area .desc {margin-bottom: 5px; font-size: 15px; margin-top: 30px;}*/
+.major_cont .textwrap .summary_area .bonus {display:block; margin-top:3px; font-size: 15px; }
+.major_cont .textwrap .summary_area .bonus span {padding: 1px 8px; font-size: 13px; background: #fff; color: #00bcd4; border-radius:13px; font-weight: bold; margin-right: 4px;}
+.major_cont .textwrap .reserve_btn {margin-top: 10px;}
+.major_cont .textwrap .reserve_btn .btn {border:0; box-shadow:none; background:#556ce3; border-radius:8px; color: #fff; padding:7px 20px; font-size: 18px;}
+
+.major_cont .textwrap .booking_area {margin-top:10px; padding-top: 10px; border-top:1px solid #eee}
+
+.booking_area .choose_device label {padding-right:10px}
+.booking_area .choose_device span i {font-size: 20px; margin-left:4px}
+.booking_area .choose_device span i.fa-android {color:green}
+.booking_area .choose_device span i.fa-apple {color: #ccc;}
+
+.booking_area .choose_device label:first-child {margin-right: 6px}
+.booking_area .choose_device input[type=radio] {display:none}
+.booking_area .choose_device input[type=radio] + span {cursor:pointer; position:relative; padding-left:17px}
+.booking_area .choose_device input[type=radio] + span::before {content:""; display:inline-block; width:14px; height:14px; border-radius:50%; border:1px solid #fff; background: #fff; box-sizing:border-box; position:absolute; top:2px; left:0; transition:0.2s}
+.booking_area .choose_device input[type=radio]:checked + span::before {content:""; background: #556ce3; border:2px solid #fff;}
+.booking_area .choose_device input[type=radio]:disabled + span::before {content:""; border:1px solid #ccc; background:#eee;}
+.booking_area .choose_device input[type=radio]:disabled:checked + span::before {content:""; border:2px solid #fff; background:#ccc;}
+
+.booking_area .booking_title {font-weight: normal; font-size: 14px;}
+.booking_area .booking_input {margin-top: 5px}
+.booking_area .booking_input .booking_tel::after {content: ""; display: block; clear: both;}
+.booking_area .booking_input .booking_tel .tel-form {display:block; float:left; width:20%; height:32px; margin-right: 5px; border:1px solid #ddd; padding:0 8px; border-radius: 3px; color:#333!important}
+.booking_area .booking_input .booking_tel .tel-form:focus {background: #eee;}
+.booking_area .booking_input .booking_tel .reserv-btn {border: 1px solid #00bcd4; background: #00bcd4; color:#fff; padding:5px 14px 6px; border-radius:4px; transition:0.3s; cursor: pointer;}
+.booking_area .booking_input .booking_tel .reserv-btn:hover {background: #00a0b4;}
+.booking_area .booking_input .booking_tel .reserv-btn:focus {background: #00a0b4;}
+.booking_area .booking_input .booking_tel .reserv-btn:disabled {color:#aaa; border-color:#ddd; background: #eee;}
+
+.booking_area .booking_input .booking_agree {margin: 5px 0 ; font-size: 15px;}
+.booking_area .booking_input .booking_agree br {display:none}
+.booking_area .booking_input .booking_agree input[type=checkbox] {display:none;}
+.booking_area .booking_input .booking_agree input[type=checkbox] + span {cursor:pointer; position:relative; padding-left:20px;}
+.booking_area .booking_input .booking_agree input[type=checkbox] + span::before {content:""; display: block; position: absolute; left:0; top:2px; width:16px; height:16px; border-radius:2px; background: #fff; transition:0.2s;}
+.booking_area .booking_input .booking_agree input[type=checkbox]:checked + span::after {content:""; display: block; position: absolute; top:4px; left:1px; width:5px; height:9px; border-right:2px solid #fff!important; 
+border-bottom:2px solid #fff!important; z-index:2; transform: rotate(37deg); -webkit-transform:rotate(37deg); -ms-transform:rotate(37deg); transform-origin:100% 100%; -webkit-transform:rotate(37deg); -ms-transform:rotate(37deg);}
+.booking_area .booking_input .booking_agree input[type=checkbox]:checked + span::before {content:""; display: block; width:16px; height:16px; background: #00bcd4; z-index:1}
+.booking_area .booking_input .booking_agree input[type=checkbox]:disabled + span::before {content:""; background:#999;}
+
+.booking_area .booking_input .booking_agree .privacy_view {font-size: 12px; padding: 1px 4px; border: 1px solid #bbb; color: #999; transition: 0.2s;}
+.booking_area .booking_input .booking_agree .privacy_view:hover {background: #bbb; color: #fff}
+
+.qr_area {border-top: 1px solid #777; margin-top: 10px; padding:10px; text-align: center; font-size: 15px;}
+.qr_area ul::after {content:""; display: block; clear: both;}
+.qr_area ul {display:flex; justify-content:center; padding-top:10px}
+.qr_area ul li {padding:0 20px; font-size: 16px;}
+.qr_area ul li img {width: 80px; height: 80px;}
+.qr_area ul li i {padding-right:4px}
+.qr_area .qrcode_aos i {color: green;}
+.qr_area .qrcode_ios i {color: #ccc;}
+
+.detail_content {padding:45px 0 40px;}
+.cont_slider img {max-height:250px; border-radius:8px; margin:0 4px}
+.sub_slider, .detail_media {padding-bottom: 30px;}
+
+.slick-prev:before {content:""; display:block; width:16px; height: 26px; background:url(../img/prev_btn.png) no-repeat; background-size:contain}
+.slick-next:before {content:""; display:block; width:16px; height: 26px; background:url(../img/next_btn.png) no-repeat; background-size:contain}
+.slick-prev, .slick-next {padding:3px; background: rgba(0,0,0,0.1); height: 30px; width: 22px; z-index: 1;}
+
+.detail_media {text-align: center;}
+.detail_media img {display: block; max-width:100%; margin:10px auto;}
+
+.introduce .title_box {text-align: center; padding:0 0 20px; position: relative;}
+.introduce .title_box h2 {display:inline-block; padding: 10px 25px; border-radius: 50px; color: #00bcd4; font-weight: bold; font-size: 17px; border: 3px solid #00bcd4; overflow: hidden; line-height: 1.2;}
+
+.introduce .intro_content_wrap {padding:20px 15px; background:#272a2c; border-radius:8px;}
+.introduce .intro_content_wrap .intro_content {height:170px; overflow:hidden; color: #fff;}
+
+.introduce .intro_content_wrap .more_view_btn {padding-top: 8px; position: relative;}
+.introduce .intro_content_wrap .more_view_btn::after {content:""; display: block; width:100%; height:20px; position: absolute; top:-20px; left:0;
+background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(39,42,44,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(39,42,44,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(39,42,44,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#272a2c',GradientType=0 ); /* IE6-9 */
+}
+
+.introduce .intro_content_wrap .more_view_btn .btn {background: transparent; border:0; color: #00bcd4;}
+.introduce .intro_content_wrap .more_view_btn .btn img {padding-left:4px}
+
+@media screen and (max-width:1100px) {
+	.major_cont .imgwrap {width: 140px; height: 140px;}
+	.major_cont .textwrap {width: calc(100% - 150px)}
+	.major_cont .textwrap .summary_area .summary_title {font-size:18px}
+
+	.hidden_reserve {width:calc(90% - 2px);}
+}
+
+@media screen and (max-width:850px) {
+	.top_media .wrap {width:100%!important}
+}
+
+@media screen and (max-width:767px) {
+
+	.game_summary {border:0; padding:15px 10px}
+
+	.major_cont .imgwrap {width: 80px; height: 80px;}
+	.major_cont .textwrap {width: calc(100% - 90px)}
+	.major_cont .textwrap .summary_area .summary_title {font-size: 16px;}
+	.major_cont .textwrap .summary_area .summary_title br {display:inline}
+	.major_cont .textwrap .summary_area .summary_title .summary_sub {padding-left:0;}
+	.major_cont .textwrap .summary_area .m_bonus {display:block}
+
+	.major_cont .textwrap .booking_area {margin-left:-90px; margin-top:0}
+	.major_cont .textwrap .qr_area {margin-left:-90px;}
+    
+	.booking_area .booking_title {font-size:15px}
+	.booking_area .booking_input .booking_agree input[type=checkbox] + span {font-size:15px}
+	.booking_area .booking_input .booking_agree br {display:inline}
+	.booking_area .booking_input .booking_agree .privacy_view {margin-top:5px; display:inline-block; font-size:12px}
+	.booking_area .booking_input .booking_agree input[type=checkbox] + span::before {top:4px}
+	.booking_area .booking_input .booking_agree input[type=checkbox]:checked + span::before {top:4px}
+	.booking_area .booking_input .booking_agree input[type=checkbox]:disabled + span::before {top:4px}
+	.booking_area .booking_input .booking_agree input[type=checkbox]:disabled:checked + span::before {top:4px}
+	
+	.hidden_reserve {width:100%; margin:0; top:0; left:0;}
+}
+
+@media screen and (max-width:480px) {
+	.booking_area .booking_input .booking_tel .tel-form {width:32%; margin-right:1.5%}
+	.booking_area .booking_input .booking_tel .tel-form:nth-child(3) {margin-right:0;}
+	.booking_area .booking_input .booking_tel .reserv-btn {width:100%; margin-top:5px}
+
+	.sub_reservation .title_box h2 {font-size: 15px;}
+	.sub_reservation .title_box::before {display: none;}
+	.sub_reservation .title_box::after {display: none;}
+
+	.cont_slider img {max-height:180px}
+	
+	.introduce .title_box h2 {font-size: 15px;}
+	.introduce .title_box::before {display: none;}
+	.introduce .title_box::after {display: none;}
+}

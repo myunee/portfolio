@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMARTPOSTING 관리자페이지</title>
+<!-- favicon -->
+<link rel="shortcut icon" href="favicon.ico">
+<!-- bootstrap 4 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<!-- 커스텀 css -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--본문 시작-->
+<div class="background-img"></div>
+<div class="login-wrap">
+    <div class="row">
+        <div class="col-lg-4 col-12 login-inner">
+            <div class="page-top clearfix">
+                <div class="float-left"><span class="back-history" onclick="window.history.back();">뒤로가기</span></a></div>
+                <div class="float-right">스마트포스팅<span class="smooth-pill">관리자 화면</span></div>
+            </div>
+            <div class="page-title text-center"><h2>로그인</h2></div>
+            <div class="login-form">
+                <form>
+                    <div class="mb-3">
+                        <label class="pb-1 join-label">관리자 ID</label>
+                        <input type="text" class="form-control" name="" value="">
+                    </div>
+                    <div class="mb-3">
+                        <label class="pb-1 join-label">비밀번호</label>
+                        <input type="password" class="form-control" name="" value="">
+                    </div>
+                    <div class="clearfix mb-3">
+                        <div class="checkbox-control white-ck">
+                            <input type="checkbox" id="ck-sample">
+                            <label for="ck-sample" class="ck">로그인 유지</label>
+                        </div>
+                        <div class="float-right"><a href="findpw.html" class="forgot-pw">비밀번호를 잊으셨나요?</a></div>
+                    </div>
+                    <div class="text-center py-3">
+                        <input type="button" value="로그인" name="" class="btn btn-pill btn-danger btn-block">
+                    </div>
+                    <div class="sns-login">
+                        <div class="text-center"><h3 class="title">SNS 로그인</h3></div>
+                        <div class="py-2"><input type="button" value="Facebook으로 로그인" name="" class="btn btn-pill btn-block sign-fb"></div>
+                        <div class="py-2"><input type="button" value="Google으로 로그인" name="" class="btn btn-pill btn-block sign-gg"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ 본문 끝-->
+
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- bootstrap 4 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function(){
+        /* 뒤로가기 */
+        $('#back-history').click(function(){
+            window.history.back();
+        })
+    })
+</script>
+</body>

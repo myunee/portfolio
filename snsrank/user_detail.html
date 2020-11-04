@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v3.2&appId=1283984708421215&autoLogAppEvents=1"></script>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/Chart.min.js"></script>
+<title>Detail</title>	
+</head>
+<body>
+    <div class="bg_dark">
+        <header>
+            <div class="header_wrap">
+                <h1 class="top_logo"><img src="img/logo.png" alt="SNS RANK"></h1>
+                <ul class="top_menu">
+                    <li><a href="rank_index.html">HOME</a></li>
+                    <li><a href="rank_page1.html">RANKING</a></li>
+                    <li><a href="rank_page2.html">MY GROUP</a></li>
+                </ul>
+                <div class="search_box">
+                    <label for="sbox2">검색어, Page name or URL로 분석</label>
+                    <input type="search" id="sbox2" class="form-adjust">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <!--로그인 상태에서만 보임-->
+                <div class="user_status">
+                    <a href="" class="user_thumb" title="my page"><img src="img/user-default.jpg" alt="my page"></a>
+                    <a href="" class="hd_logout" title="logout"><img src="img/logout.png" alt="logout"></a>
+                </div>
+            </div>
+        </header>
+        <div class="wrap">
+            <div id="content">
+                <div class="detail_page">
+                    <section class="user_info">
+                        <div class="img_area">
+                            <div class="imgwrap"><img src="img/user-default.jpg" alt=""></div>
+                        </div>
+                        <div class="text_area">
+                            <h2>페이지명</h2>
+                            <span class="h2_desc">Facebook 영향력은 국내 0위 (-), 상위 1% 입니다.</span>
+                            <ul class="ranking">
+                                <li>팬 랭킹: 0위
+                                    <!--상승했을때-->
+                                    <div class="change_rank rank_up"><img src="img/up_arrow.png" alt="">10</div>
+                                </li>
+                                <li>분류 랭킹: <span class="subject_sort">lighthouse</span>분야 0위
+                                    <!--변동없을때-->
+                                    <div class="change_rank">&nbsp;-&nbsp;</div>
+                                </li>
+                            </ul>
+                            <div class="link-group">
+                                <span class="link-border">
+                                    <span>+ Add MyGroup</span>
+                                    <select class="form-adjust myG_select">
+                                        <option value="">+ My Group에 추가</option>
+                                        <option value="">내가 운영하는 Facebook</option>
+                                        <option value="">관심 Facebook</option>
+                                        <option value="">즐겨찾는 Facebook</option>
+                                        <option value="">+ 새로운 Facebook 그룹</option>
+                                    </select>
+                                </span>
+                                <a href="" class="my_link bg-abricot"><i class="fab fa-facebook-f"></i>&nbsp;&nbsp;페이스북 공유</a>
+                                <span class="tooltip">지금 페이스북에 공유하여 영향력을 상승시켜보세요!</span>
+                                <a href="" class="my_link bg-lightabricot">페이지 방문</a>
+                            </div>
+                        </div>
+                    </section>
+                    <!--// user_info-->
+                    <section class="user_detail">
+                        <div class="detail1">
+                            <h3 class="h3">기본 정보</h3>
+                            <ul class="">
+                                <li><span class="badge">친구</span> 1,000,000명&nbsp;&nbsp;<span class="badge">팔로워</span> 1,000,000명</li>
+                                <li><span class="badge">친구 중</span> 0위&nbsp;&nbsp;<span class="badge">친구들 영향력</span> 00,000건 <a href="" class="friend_rank">친구들 영향력 보기</a></li>
+                                <li><span class="badge">포스팅 당 평균 참여수(Activity)</span> 00,000건 <small>(좋아요+댓글+공유)</small></li>
+                                <li><span class="badge">최근 1달 간 참여 수</span> 000,000건</li>
+                                <li><span class="badge">최근 1달 간 포스팅 수</span> 00건</li>
+                            </ul>
+                        </div>
+                        <div class="detail2">
+                            <h3 class="h3">유저 참여</h3>
+                            <!--ul>
+                                <li>최근 1달 이내 유저 참여가 없는 페이지입니다.</li>
+                            </ul-->
+                            <ul>
+                                <li>포스팅별로 평균 <strong>13,000명</strong>이 게시글을 좋아합니다.</li>
+                                <li>포스팅별로 평균 <strong>300명</strong>이 댓글을 남깁니다.</li>
+                                <li>포스팅별로 평균 <strong>150명</strong>이 공유를 합니다.</li>
+                                <li>하루 평균 포스팅 수 : <strong>3.5건</strong></li>
+                                <li>하루 평균 참여 수 : <strong>7000건</strong></li>
+                            </ul>
+                        </div>
+                        <div class="gender_per">
+                            <div class="total_box">
+                                <div class="title">성별/연령별 통계</div>
+                                <div class="cont">
+                                    <ul>
+                                        <li class="text-night">남성 <strong>61%</strong></li>
+                                        <li class="text-rose">여성 <strong>14%</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="value_box">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td class="age">13-17</td>
+                                            <td class="g_box">
+                                                <div class="graph_box">
+                                                    <ul>
+                                                        <li class="gender1"><span class="graph_bar" style="width:10.0%"></span></li>
+                                                        <li class="gender2"><span class="graph_bar" style="width:2.0%"></span></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td class="gender">
+                                                <ul>
+                                                    <li class="gender1"><span class="graph_txt">10.0%</span></li>
+                                                    <li class="gender2"><span class="graph_txt">2.0%</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="age">18-24</td>
+                                            <td class="g_box">
+                                                <div class="graph_box">
+                                                    <ul>
+                                                        <li class="gender1"><span class="graph_bar" style="width:20.5%"></span></li>
+                                                        <li class="gender2"><span class="graph_bar" style="width:5.5%"></span></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td class="gender">
+                                                <ul>
+                                                    <li class="gender1"><span class="graph_txt">20.5%</span></li>
+                                                    <li class="gender2"><span class="graph_txt">5.5%</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="age">25-34</td>
+                                            <td class="g_box">
+                                                <div class="graph_box">
+                                                    <ul>
+                                                        <li class="gender1"><span class="graph_bar" style="width:25.0%"></span></li>
+                                                        <li class="gender2"><span class="graph_bar" style="width:20.0%"></span></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td class="gender">
+                                                <ul>
+                                                    <li class="gender1"><span class="graph_txt">25.0%</span></li>
+                                                    <li class="gender2"><span class="graph_txt">20.0%</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="age">35-44</td>
+                                            <td class="g_box">
+                                                <div class="graph_box">
+                                                    <ul>
+                                                        <li class="gender1"><span class="graph_bar" style="width:4.5%"></span></li>
+                                                        <li class="gender2"><span class="graph_bar" style="width:4.0%"></span></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td class="gender">
+                                                <ul>
+                                                    <li class="gender1"><span class="graph_txt">4.5%</span></li>
+                                                    <li class="gender2"><span class="graph_txt">4.0%</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="age">45-54</td>
+                                            <td class="g_box">
+                                                <div class="graph_box">
+                                                    <ul>
+                                                        <li class="gender1"><span class="graph_bar" style="width:1.0%"></span></li>
+                                                        <li class="gender2"><span class="graph_bar" style="width:2.5%"></span></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td class="gender">
+                                                <ul>
+                                                    <li class="gender1"><span class="graph_txt">1.0%</span></li>
+                                                    <li class="gender2"><span class="graph_txt">2.5%</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="age">55-64</td>
+                                            <td class="g_box">
+                                                <div class="graph_box">
+                                                    <ul>
+                                                        <li class="gender1"><span class="graph_bar" style="width:0%"></span></li>
+                                                        <li class="gender2"><span class="graph_bar" style="width:0%"></span></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td class="gender">
+                                                <ul>
+                                                    <li class="gender1"><span class="graph_txt">0.0%</span></li>
+                                                    <li class="gender2"><span class="graph_txt">0.0%</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="age">65이상</td>
+                                            <td class="g_box">
+                                                <div class="graph_box">
+                                                    <ul>
+                                                        <li class="gender1"><span class="graph_bar" style="width:0%"></span></li>
+                                                        <li class="gender2"><span class="graph_bar" style="width:0%"></span></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                            <td class="gender">
+                                                <ul>
+                                                    <li class="gender1"><span class="graph_txt">0.0%</span></li>
+                                                    <li class="gender2"><span class="graph_txt">0.0%</span></li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!--// user_detail-->
+                    <section class="chart">
+                        <div class="lineCt">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                        <div class="donut text-center">
+                            <p class="title">POSTING TYPE</p>
+                            <canvas id="donutChart1"></canvas>
+                        </div>
+                        <div class="donut text-center">
+                            <p class="title">POSTING TIME</p>
+                            <canvas id="donutChart2"></canvas>
+                        </div>
+                    </section>
+                    <!--// chart-->
+                    <section class="similar_view">
+                        <div class="updown_box updown_half">
+                            <div class="up_box">
+                                <h3>비슷한 경쟁 페이지</h3>
+                            </div>
+                            <div class="down_box">
+                            <table class="table">
+                                <colgroup>
+                                    <col width="50">
+                                    <col width="*">
+                                    <col width="15%">
+                                    <col width="15%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>분류랭킹</th>
+                                        <th>Page</th>
+                                        <th>Fan</th>
+                                        <th>Activity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>name</td>
+                                        <td>1,000,000</td>
+                                        <td>25,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>name</td>
+                                        <td>1,000,000</td>
+                                        <td>25,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>name</td>
+                                        <td>1,000,000</td>
+                                        <td>25,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                        <div class="updown_box updown_half">
+                            <div class="up_box">
+                                <h3>비슷한 다른 페이지</h3>
+                            </div>
+                            <div class="down_box">
+                            <table class="table">
+                                <colgroup>
+                                    <col width="50">
+                                    <col width="*">
+                                    <col width="15%">
+                                    <col width="15%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>참여랭킹</th>
+                                        <th>Page</th>
+                                        <th>Fan</th>
+                                        <th>Activity</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>name</td>
+                                        <td>1,000,000</td>
+                                        <td>25,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>name</td>
+                                        <td>1,000,000</td>
+                                        <td>25,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>name</td>
+                                        <td>1,000,000</td>
+                                        <td>25,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>name</td>
+                                        <td>1,000,000</td>
+                                        <td>25,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>name</td>
+                                        <td>1,000,000</td>
+                                        <td>25,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </section>
+                    <!--facebook comment-->
+                    <section class="facebook_comment">
+                        <div id="fb-root">
+                            <div class="fb-comments" data-href="http://www.modooevent.co.kr/html_new/test2/user_detail.html" data-width="100%" data-numposts="5"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <!--// content-->
+        </div>
+        <!--// wrap-->
+        <footer>
+            <p>2019 SMARTPOSTING ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+
+
+<script>
+/*var ctx = document.getElementById('myChart');*/
+/*var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});*/
+
+//chart
+
+    var ctx = document.getElementById('lineChart');
+    var lineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['January','February','March','April','May','June','July','August','September'],
+            datasets: [{
+                label: 'ACTIVITY',
+                data: [65,59,80,81,56,44,100,20,12],
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                lineTension: 0.1
+            }]
+        }
+    });
+
+    var ctx2 = document.getElementById('donutChart1');
+    var donutChart = new Chart(ctx2, {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                label: 'POSTING TYPE',
+                data: [300,50,100],
+                backgroundColor: [
+                    'rgb(255,99,132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                ]
+            }]
+        }
+    });
+
+    var ctx3 = document.getElementById('donutChart2');
+    var donutChart = new Chart(ctx3, {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                label: 'POSTING TIME',
+                data: [300,50,100],
+                backgroundColor: [
+                    'rgb(255,99,132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)'
+                ]
+            }]
+        }
+    });
+
+//searchbox jQuery
+    var placeholder=$('.search_box input[type=search]');
+
+    placeholder.on('focus',function(){
+        $(this).siblings('label').fadeOut('fast');
+    })
+    placeholder.on('focusout',function(){
+        if($(this).val() == ''){
+            $(this).siblings('label').fadeIn('fast');
+        } 
+})
+
+</script>
+
+
+</body>
+</html>

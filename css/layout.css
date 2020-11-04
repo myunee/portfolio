@@ -56,7 +56,7 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 .portfolio .portfolio-list .list-item .text-area .desc {font-size: 13px; color: #9d9db3;}
 .portfolio .portfolio-list .list-item:hover .text-area .desc {color: #ddd;}
 
-.portfolio .portfolio-list .list-item:hover .text-area.rebots {background-color: #ffa09f;}
+.portfolio .portfolio-list .list-item:hover .text-area.csbots {background-color: #ffa09f;}
 .portfolio .portfolio-list .list-item:hover .text-area.teuk {background-color: #95d4cc;}
 .portfolio .portfolio-list .list-item:hover .text-area.sajeon {background-color: #aba8d7;}
 .portfolio .portfolio-list .list-item:hover .text-area.admin {background-color: #40577a;}
@@ -80,7 +80,7 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 
 
 /* footer */
-.footer {background: #f0f2f4; padding: 30px 0; text-align: center; font-size: 12px;}
+.footer {background: #fff; border-top: 1px solid #eee; padding: 30px 0; text-align: center; font-size: 12px;}
 
 
 /** 반응형 **/
@@ -151,7 +151,7 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 .sub-transparent {width: 100%; height: 380px; background: transparent;}
 
 /* content */
-.navigation {color: #a5a8b6; font-weight: bold; margin-bottom: 25px;}
+.navigation {color: #a5a8b6; /*font-weight: bold; */margin-bottom: 25px;}
 .navigation .back-btn {color: #a5a8b6;}
 .navigation .current-page {color: #373b4f;}
 
@@ -163,7 +163,7 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 .content .content-txt .shortcut {width: 100%;}
 .content .content-txt .shortcut .shortcut-btn {display: inline-block; width: 100%; margin-top: 10px; padding: 15px; border-radius: 7px; background-color: #3e59a8; color: #fff; text-align: center;}
 .content .content-scrshot {width: 70%; float: left;}
-.content .content-scrshot img {max-width: 100%;}
+.content .content-scrshot img {max-width: 100%; margin-bottom: 10px;}
 
 /** 반응형 **/
 @media screen and (max-width: 800px) {

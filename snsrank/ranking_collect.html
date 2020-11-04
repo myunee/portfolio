@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<script src="js/jquery-3.3.1.js"></script>
+<title>랭킹 모아보는 페이지</title>
+</head>
+<body>
+    <div class="bg_dark">
+        <header>
+            <div class="header_wrap">
+                <h1 class="top_logo"><img src="img/logo.png" alt="SNS RANK"></h1>
+                <ul class="top_menu">
+                    <li><a href="rank_index.html">HOME</a></li>
+                    <li><a href="rank_page1.html">RANKING</a></li>
+                    <li><a href="rank_page2.html">MY GROUP</a></li>
+                </ul>
+                <div class="search_box">
+                    <label for="sbox2">검색어, Page name or URL로 분석</label>
+                    <input type="search" id="sbox2" class="form-adjust">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <!--로그인 상태에서만 보임-->
+                <div class="user_status">
+                    <a href="" class="user_thumb" title="my page"><img src="img/user-default.jpg" alt="my page"></a>
+                    <a href="" class="hd_logout" title="logout"><img src="img/logout.png" alt="logout"></a>
+                </div>
+            </div>
+        </header>
+        <div class="wrap">
+            <div id="content"><!--id = content : 공통-->
+                <div class="rank_collect">
+                    <div class="box-clearboth">
+                        <div class="left_box">
+                            <div class="left_box_inner">
+                                <div class="left_box_title">
+                                    <!--친구영향력보기 일 경우
+                                    <h3>ㅁㅁㅁ 친구 Facebook</h3>
+                                    -->
+                                    <!--그룹 상세보기 일 경우-->
+                                    <div class="titlewrap">
+                                        <h3>내가 운영하는 Facebook</h3>
+                                        <span class="edit">edit</span>
+                                    </div>
+                                    <!--edit area-->
+                                    <div id="editarea">
+                                        <form action="">
+                                            <div class="editarea_wrap">
+                                                <input type="text" class="form-adjust focus-bg edit_text" value="내가 운영하는 Facebook">
+                                                <input type="submit" class="edit_submit" value="수정">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <!--// edit area-->
+                                </div>
+                                <ul>
+                                    <li><span>3</span> PAGE</li>
+                                    <li><span>75,000</span> ACTIVITY</li>
+                                    <li><span>3,000,000</span> FAN</li>
+                                </ul>
+                                <!--친구 영향력 보기에만 추가
+                                <div class="share_box text-center">
+                                    <a href="" class="link_btn link_btn_night">ㅁㅁㅁ님 친구랭킹 공유</a>
+                                    <a href="" class="link_btn link_btn_darkblue">내 친구들 영향력 확인</a>
+                                </div>-->
+                            </div>
+                        </div>
+                        <div class="right_box">
+                            <!--친구가 없을경우
+                            <div class="friend-none text-center">
+                                <span>친구가 없습니다. 친구를 만들어 보세요.</span>
+                            </div>
+                            -->
+                            <table class="table">
+                                <colgroup>
+                                    <col width="50">
+                                    <col width="*">
+                                    <col width="15%">
+                                    <col width="15%">
+                                    <col width="15%">
+                                    <col width="3%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Rank</th>
+                                        <th>Page</th>
+                                        <th>Fan</th>
+                                        <th>Activity</th>
+                                        <th>Activity Rank</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <!--1위: .top_rank 추가-->
+                                        <td><span class="top_rank">1위</span></td>
+                                        <td class="subject"><a href=""><div class="imgthumb"><img src="img/user-default.jpg" alt=""></div>page</a></td>
+                                        <td>
+                                            <div class="num_value">1,000,000</div>
+                                            <!--상승했을때-->
+                                            <div class="change_rank rank_up"><img src="img/up_arrow.png" alt="">10</div>
+                                        </td>
+                                        <td>
+                                            <div class="num_value">25,000</div>
+                                            <!--하락했을때-->
+                                            <div class="change_rank rank_down"><img src="img/down_arrow.png" alt="">1</div>
+                                        </td>
+                                        <td>
+                                            <div class="num_value">10</div>
+                                            <!--변동없을때-->
+                                            <div class="change_rank">&nbsp;-&nbsp;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <!--내 순위: .my_rank 추가-->
+                                        <td><span class="my_rank">MY</span></td>
+                                        <td class="subject"><a href=""><div class="imgthumb"><img src="img/user-default.jpg" alt=""></div>page</a></td>
+                                        <td>
+                                            <div class="num_value">1,000,000</div>
+                                            <div class="change_rank rank_up"><img src="img/up_arrow.png" alt="">10</div>
+                                        </td>
+                                        <td>
+                                            <div class="num_value">25,000</div>
+                                            <div class="change_rank rank_down"><img src="img/down_arrow.png" alt="">1</div>
+                                        </td>
+                                        <td>
+                                            <div class="num_value">10</div>
+                                            <div class="change_rank">&nbsp;-&nbsp;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td class="subject"><a href=""><div class="imgthumb"><img src="img/user-default.jpg" alt=""></div>page</a></td>
+                                        <td>
+                                            <div class="num_value">1,000,000</div>
+                                            <div class="change_rank rank_up"><img src="img/up_arrow.png" alt="">10</div>
+                                        </td>
+                                        <td>
+                                            <div class="num_value">25,000</div>
+                                            <div class="change_rank rank_down"><img src="img/down_arrow.png" alt="">1</div>
+                                        </td>
+                                        <td>
+                                            <div class="num_value">10</div>
+                                            <div class="change_rank">&nbsp;-&nbsp;</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>   
+                    </div>             
+                </div>
+            </div>
+            <!--/ #content-->
+        </div>
+        <footer>
+            <p>COPYRIGHT © 2019 SmartPosting ALL RIGHTS RESERVED.</p>
+        </footer>
+    </div>
+
+    
+<script>
+//search box
+    var placeholder=$('.search_box input[type=search]');
+
+    placeholder.on('focus',function(){
+        $(this).siblings('label').fadeOut('fast');
+    })
+    placeholder.on('focusout',function(){
+        if($(this).val() == ''){
+            $(this).siblings('label').fadeIn('fast');
+        } 
+    })
+    
+//edit
+    $('.edit').click(function(){
+        $('#editarea').css('display','block');
+        $('.titlewrap').css('display','none')
+    })
+
+</script>
+</body>
+</html>

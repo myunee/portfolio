@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[서브]스마트플레이-사전예약</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link rel="stylesheet" href="slick/slick.css">
+<link rel="stylesheet" href="slick/slick-theme.css">
+<link rel="stylesheet" href="css/layout.css">
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+        /*게임설명 내 슬라이드*/
+        $('.cont_slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            variableWidth: true
+        });
+
+        /*게임소개 더보기*/
+        $('#moreView').click(function(){
+            $('.more_view_btn').css('display','none');
+            $('.introduce .intro_content_wrap .intro_content').css('height','auto');
+        });
+    });
+</script>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <h1 class="logo"><a href="index.html"><img src="img/logo.png" alt=""></a></h1>
+        </div>
+    </header>
+    <div class="hidden_head"></div>
+    <div class="top_media">
+        <div class="wrap">
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/LlDSMktrlwE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="sub_reservation">
+        <div class="wrap">
+            <div class="title_box">
+                <h2>예약하기</h2>
+            </div>
+            <div class="game_summary">
+                <section class="major_cont show_major_cont">
+                    <form action="">
+                        <div class="imgwrap">
+                            <img src="img/pic2_.jpg" alt="">
+                        </div>
+                        <div class="textwrap">
+                            <div class="summary_area">
+                                <h2 class="summary_title">프로미스 키스<br><span class="company">idPlay Entertainment</span></h2>
+                                <p class="desc">귀여운 여신들이 육성하라 심쿵하는 연애 모험!</p>
+                                <p class="summary_data">가을 출시 예정</p>
+                                <span class="bonus"><span>사전예약 보상</span>SR 멜리오다스 + 다이아 30개(뽑기 10회 분) + 스페셜 멜리오다스 코스튬 지급</span>
+                            </div>
+                            <div class="booking_area">
+                                <div class="choose_device">
+                                    <label for="pf1">
+                                        <input type="radio" name="platform" id="pf1"><span><i class="fab fa-android"></i> 안드로이드</span>
+                                    </label>
+                                    <label for="pf2">
+                                        <input type="radio" name="platform" id="pf2"><span><i class="fab fa-apple"></i> iOS</span>
+                                    </label>
+                                </div>
+                                <div class="booking_input">
+                                    <div class="booking_tel">
+                                        <input type="tel" class="tel-form focus-outline" id="tel_1" maxlength="3">
+                                        <input type="tel" class="tel-form focus-outline" id="tel_2" maxlength="4">
+                                        <input type="tel" class="tel-form focus-outline" id="tel_3" maxlength="4">
+                                        <button class="reserv-btn">예약하기</button>
+                                    </div>
+                                    <div class="booking_agree">
+                                        <label for="agr">
+                                            <input type="checkbox" id="agr" checked><span>이벤트 참여를 통한 SMS수신 활용 동의</span>
+                                        </label>
+                                        <br>
+                                        <a href="" class="privacy_view">개인정보 취급방침 자세히 보기</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/ textwrap-->
+                    </form>
+                </section>
+            </div>
+            <!--/ game_summary-->
+        </div>
+        <!--/ wrap-->
+    </div>
+    <!--/ sub_reservation-->
+    <div class="detail_content">
+        <div class="wrap">
+            <div class="sub_slider">
+                <ul class="cont_slider">
+                    <li><img src="img/slide3.jpg" alt=""></li>
+                    <li><img src="img/slide4.jpg" alt=""></li>
+                    <li><img src="img/slide5.jpg" alt=""></li>
+                    <li><img src="img/slide6.jpg" alt=""></li>
+                </ul>
+            </div>
+            <!--/ sub_slider-->
+            <div class="detail_media">
+                <img src="img/img1.jpg" alt="">
+            </div>
+            <!--/ detail_media-->
+            <div class="introduce">
+                <div class="title_box">
+                    <h2>게임 소개</h2>
+                </div>
+                <div class="intro_content_wrap">
+                    <div class="intro_content">
+                        ■「유희왕」이 모바일 앱으로 등장! 최강의 듀얼리스트는 누구인가! ■<br>
+                        ・초보자에게도 쉬운 룰과 간단한 조작! 유희왕 숙련자도 빠질만한 깊이까지!<br>
+                        ・전 세계의 듀얼리스트와 언제라도 듀얼을 즐길 수 있는 대전형 카드 게임!<br>
+                        ・유희왕 듀얼 몬스터즈, 유희왕GX, 유희왕5D's(파이브디즈)에서의 캐릭터들이 속속 참전!<br>
+                        ・어둠의 유희, 카이바, 주다이, 유성 등 작품을 뛰어넘은 대전을 즐겨라!<br>
+                        ・애니메이션 오리지널 성우의 음성도 인기!<br>
+                        ・에이스 몬스터의 등장 장면은 박력 넘치는 3D로 연출!<br>
+                        ・덱 편집은 자유! 카드를 모아 당신만의 영혼의 덱으로 강자를 쓰러트려라!<br>
+                        <br>
+                        <br>
+                        [특징]<br>
+                        -듀얼<br>
+                        유희왕 오피셜 카드게임이 모바일 버전으로 등장했습니다. 모바일에 최적화된 새로운 디자인으로 컨트롤을 금세 익힐 수 있습니다. 또한, "블랙 매지션"이나 "푸른 눈의 백룡"과 같은 주력 몬스터들의 역동적인 애니메이션 효과를 볼 수 있습니다!<br>
+                        <br>
+                        -듀얼 월드(싱글 모드)<br>
+                        '유희왕' 세계에서 가장 좋아하는 캐릭터들과 듀얼을 펼치고 스테이지 미션을 완료하여 다양한 보상을 받으세요!<br>
+                        상점에서 새로운 카드를 구하세요! <br>
+                        <br>
+                        -듀얼리스트<br>
+                        유희, 카이바, 조이, 메이 등 전설의 듀얼리스트들에게 도전하세요! 특정 미션을 완료하고, 인기 캐릭터들을 만나보세요!<br>
+                        원하는 캐릭터의 레벨을 올려 스킬과 보상을 받고 최고의 실력을 키우세요!<br>
+                        <br>
+                        -온라인 대전(대전 모드)<br>
+                        유희왕 듀얼 링크스로 전 세계 방방곡곡의 플레이어들과 언제 어디서든 뜨거운 열전을 펼치세요! 랭킹을 계속 올려 듀얼 월드 킹의 자리를 차지하세요!<br>
+                        <br>
+                        -덱<br>
+                        게임 속에서 수집한 카드로 강력한 덱을 구성하고 상대를 제압하세요!<br>
+                        카드는 향후에도 계속 추가되니 기대해 주세요!<br><br>
+                    </div>
+                    <div class="more_view_btn">
+                        <button class="btn" id="moreView">더보기<img src="img/down_arrow.png" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="wrap">
+            <h1 class="logo"><img src="img/footer_logo.png" alt=""></h1>
+        </div>
+    </footer>
+</body>
+</html>
