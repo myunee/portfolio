@@ -28,7 +28,7 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 /*.header {background: #f0f2f4; padding: 18px 0; height: 80px; width: 100%;}*/
 .header {position: fixed; top: 0; left: 0; background: transparent; padding: 20px 0; height: 80px; width: 100%; color: #fff; transition: 0.3s; z-index: 990;}
 .header .logo {float: left;}
-.header .logo a {color: #fff;}
+.header .logo a {color: #fff; font-weight: 900;}
 .header .logo a:hover {color: #fff;}
 .header .gnb {float: right; margin-top: 11px;}
 .header .gnb::after {content: ''; display: block; clear: both;}
@@ -135,8 +135,14 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 }
 
 @media screen and (max-width: 640px) {
+	.darkfilter img {width: 80%;}
+
 	.profile .my-picture {display: none;}
 	.profile .my-info {width: 100%; padding: 0;}
+}
+
+@media screen and (max-width: 480px) {
+	.header .logo a {font-size: 20px;}
 }
 
 
