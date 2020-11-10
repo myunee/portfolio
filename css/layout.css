@@ -66,10 +66,11 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 
 
 /* profile */
+.profile {background-color: #fafafa;}
 .profile h3 {font-size: 28px; font-weight: bold;}
 .profile .my-picture {float: left; width: 33.333%; padding-right: 15px;}
 .profile .my-picture .picwrap {width: 100%; border-radius: 7px; overflow: hidden;}
-.profile .my-picture .picwrap img {width: 100%;}
+.profile .my-picture .picwrap img {width: 100%; display: block;}
 
 .profile .my-info {float: left; width: 66.666%; padding-left: 15px;}
 .profile .my-info .profile-detail {padding: 10px 0;}
