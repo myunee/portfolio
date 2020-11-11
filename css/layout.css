@@ -43,7 +43,7 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 .portfolio {background-color: #f0f2f4; /*#3e59a8;*/}
 /*.portfolio .section-title {color: #fff;}*/
 .portfolio .portfolio-list::after {content: ''; display: block; clear: both;}
-.portfolio .portfolio-list .list-item {float: left; width: 33.333%; padding: 10px; margin-bottom: 20px;}
+.portfolio .portfolio-list .list-item {display: none; float: left; width: 33.333%; padding: 10px; margin-bottom: 20px;}
 .portfolio .portfolio-list .list-item:nth-child(3n-2) {transform: translateX(-10px);}
 .portfolio .portfolio-list .list-item:nth-child(3n) {transform: translateX(10px);}
 .portfolio .portfolio-list .list-item .box {display: block; border-radius: 7px; overflow: hidden; transition: 0.3s;}
@@ -68,11 +68,11 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 /* profile */
 .profile {background-color: #fafafa;}
 .profile h3 {font-size: 28px; font-weight: bold;}
-.profile .my-picture {float: left; width: 33.333%; padding-right: 15px;}
+.profile .my-picture {display: none; float: left; width: 33.333%; padding-right: 15px;}
 .profile .my-picture .picwrap {width: 100%; border-radius: 7px; overflow: hidden;}
 .profile .my-picture .picwrap img {width: 100%; display: block;}
 
-.profile .my-info {float: left; width: 66.666%; padding-left: 15px;}
+.profile .my-info {display: none; float: left; width: 66.666%; padding-left: 15px;}
 .profile .my-info .profile-detail {padding: 10px 0;}
 .profile .my-info .profile-detail .subject {font-size: 17px; font-weight: 500; color: #3e59a8;}
 .profile .my-info .profile-detail .desc {font-size: 16px;}
