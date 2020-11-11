@@ -68,16 +68,17 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 /* profile */
 .profile {background-color: #fafafa;}
 .profile h3 {font-size: 28px; font-weight: bold;}
-.profile .my-picture {display: none; float: left; width: 33.333%; padding-right: 15px;}
-.profile .my-picture .picwrap {width: 100%; border-radius: 7px; overflow: hidden;}
-.profile .my-picture .picwrap img {width: 100%; display: block;}
+.profilewrap {display: none;}
+.profilewrap .my-picture {float: left; width: 33.333%; padding-right: 15px;}
+.profilewrap .my-picture .picwrap {width: 100%; border-radius: 7px; overflow: hidden;}
+.profilewrap .my-picture .picwrap img {width: 100%; display: block;}
 
-.profile .my-info {display: none; float: left; width: 66.666%; padding-left: 15px;}
-.profile .my-info .profile-detail {padding: 10px 0;}
-.profile .my-info .profile-detail .subject {font-size: 17px; font-weight: 500; color: #3e59a8;}
-.profile .my-info .profile-detail .desc {font-size: 16px;}
-.profile .my-info .profile-detail .desc .date {color: #9d9db3; padding-right: 6px;}
-.profile .my-info .profile-detail .desc .email {font-size: 25px;}
+.profilewrap .my-info {float: left; width: 66.666%; padding-left: 15px;}
+.profilewrap .my-info .profile-detail {padding: 10px 0;}
+.profilewrap .my-info .profile-detail .subject {font-size: 17px; font-weight: 500; color: #3e59a8;}
+.profilewrap .my-info .profile-detail .desc {font-size: 16px;}
+.profilewrap .my-info .profile-detail .desc .date {color: #9d9db3; padding-right: 6px;}
+.profilewrap .my-info .profile-detail .desc .email {font-size: 25px;}
 
 
 /* footer */
@@ -97,8 +98,8 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 	.portfolio .portfolio-list .list-item .img-area {overflow: hidden;}
 	.portfolio .portfolio-list .list-item .img-area img {width: 100%;}
 
-	.profile .my-picture {width: 50%; padding-right: 6px;}
-	.profile .my-info {width: 50%; padding-left: 15px;}
+	.profilewrap .my-picture {width: 50%; padding-right: 6px;}
+	.profilewrap .my-info {width: 50%; padding-left: 15px;}
 }
 
 @media screen and (max-width: 1030px) {
@@ -130,16 +131,16 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 	.portfolio .portfolio-list .list-item .text-area .desc {font-size: 11px;}
 
 	.profile h3 {font-size: 22px;}
-	.profile .my-info {padding-left: 5px;}
-	.profile .my-info .profile-detail .subject {font-size: 15px;}
-	.profile .my-info .profile-detail .desc {font-size: 14px;}
+	.profilewrap .my-info {padding-left: 5px;}
+	.profilewrap .my-info .profile-detail .subject {font-size: 15px;}
+	.profilewrap .my-info .profile-detail .desc {font-size: 14px;}
 }
 
 @media screen and (max-width: 640px) {
 	.darkfilter img {width: 80%;}
 
-	.profile .my-picture {display: none;}
-	.profile .my-info {width: 100%; padding: 0;}
+	.profilewrap .my-picture {width: 0;}
+	.profilewrap .my-info {width: 100%; padding: 0;}
 }
 
 @media screen and (max-width: 480px) {

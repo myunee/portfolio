@@ -118,13 +118,13 @@
 <div class="profile section">
 	<div class="wrap">
 		<h2 class="section-title">Profile</h2>
-		<div class="profile clearfix">
-			<div class="my-picture animate__animated">
+		<div class="profilewrap clearfix animate__animated">
+			<div class="my-picture">
 				<div class="picwrap">
 					<img src="images/profile.jpg" alt="">
 				</div>
 			</div>
-			<div class="my-info animate__animated" style="animation-delay: 0.1s;">
+			<div class="my-info">
 				<h3>김현주 / Kim HyunJu</h3>
 				<div class="profile-detail">
 					<h4 class="subject"><i class="fas fa-building"></i> 경력사항</h4>
@@ -146,10 +146,6 @@
 					<p class="desc"><a class="email" href="mailto:selene122@daum.net">selene122@daum.net</a></p>
 				</div>
 			</div>
-			<!--div class="contact">
-				<h3>연락처</h3>
-				<div class="email"><a href="mailto:selene122@daum.net">selene122@daum.net</a></div>
-			</div-->
 		</div>
 	</div>
 </div>
@@ -171,9 +167,6 @@ $(document).ready(function(){
 
     /* 프로필 영역 위치 */
    	var profileHeight = $('.profile').offset();
-
-   	/* 프로필 영역 높이 */
-   	var profileOffset = $('.profile').offset().top;
 
     /* 부드러운 스크롤 */
     //$('html').easeScroll();
@@ -197,10 +190,9 @@ $(document).ready(function(){
         	$('.list-item').css('display','block').addClass('animate__fadeInUp');
         };
 
-        // 프로필영역 페이드인
-        if($(this).scrollTop()>=profileOffset){
-        	$('.my-picture, .my-info').css('display','block').addClass('animate__fadeInUp');
-        };
+        if($(this).scrollTop()>=screenHeight+1){
+        	$('.profilewrap').css('display','block').addClass('animate__fadeInUp');
+        }
 
     });
 
