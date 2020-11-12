@@ -43,7 +43,7 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 .portfolio {background-color: #f0f2f4; /*#3e59a8;*/}
 /*.portfolio .section-title {color: #fff;}*/
 .portfolio .portfolio-list::after {content: ''; display: block; clear: both;}
-.portfolio .portfolio-list .list-item {display: none; float: left; width: 33.333%; padding: 10px; margin-bottom: 20px;}
+.portfolio .portfolio-list .list-item {opacity: 0; float: left; width: 33.333%; padding: 10px; margin-bottom: 20px;}
 .portfolio .portfolio-list .list-item:nth-child(3n-2) {transform: translateX(-10px);}
 .portfolio .portfolio-list .list-item:nth-child(3n) {transform: translateX(10px);}
 .portfolio .portfolio-list .list-item .box {display: block; border-radius: 7px; overflow: hidden; transition: 0.3s;}
@@ -68,7 +68,7 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 /* profile */
 .profile {background-color: #fafafa;}
 .profile h3 {font-size: 28px; font-weight: bold;}
-.profilewrap {display: none;}
+.profilewrap {opacity: 0;}
 .profilewrap .my-picture {float: left; width: 33.333%; padding-right: 15px;}
 .profilewrap .my-picture .picwrap {width: 100%; border-radius: 7px; overflow: hidden;}
 .profilewrap .my-picture .picwrap img {width: 100%; display: block;}

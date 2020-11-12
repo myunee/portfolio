@@ -162,11 +162,8 @@ $(document).ready(function(){
 	/* 화면 높이 */
     var screenHeight = $('.portfolio').offset().top;
 
-    /* 포트폴리오 영역 위치 */
-    var portfolioHeight = $('.portfolio').offset();
-
     /* 프로필 영역 위치 */
-   	var profileHeight = $('.profile').offset();
+   	var profileHeight = $('.profile').offset().top;
 
     /* 부드러운 스크롤 */
     //$('html').easeScroll();
@@ -187,21 +184,22 @@ $(document).ready(function(){
 
         // 포트폴리오영역 페이드인
         if($(this).scrollTop()>=1){
-        	$('.list-item').css('display','block').addClass('animate__fadeInUp');
+        	$('.list-item').css('opacity',1).addClass('animate__fadeInUp');
         };
 
+        // 프로필영역 페이드인
         if($(this).scrollTop()>=screenHeight+1){
-        	$('.profilewrap').css('display','block').addClass('animate__fadeInUp');
-        }
+        	$('.profilewrap').css('opacity',1).addClass('animate__fadeInUp');
+        };
 
     });
 
     /* 메뉴 클릭시 해당 섹션으로 이동 */
     $('#portfolio').click(function(){
-    	$('html').animate({scrollTop:portfolioHeight.top}, 800)
+    	$('html').animate({scrollTop:screenHeight}, 800)
     });
     $('#profile').click(function(){
-    	$('html').animate({scrollTop:profileHeight.top}, 800)
+    	$('html').animate({scrollTop:profileHeight}, 800)
     });
 
 })
