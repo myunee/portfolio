@@ -1,31 +1,73 @@
-/* reset */
+/********** reset **********/
 * {margin: 0; padding: 0; box-sizing: border-box;}
 ::selection {background: #3e59a8; color: #fff;}
 body {font-family: 'Raleway', 'Noto Sans KR', sans-serif; font-size: 14px; color: #373b4f; background-color: #f0f2f4;}
 ul {list-style: none;}
 a {text-decoration: none; color: #373b4f; transition: 0.3s;}
 a:hover {color: #373b4f;/* #3e59a8;*/}
+/********** reset end **********/
 
-/* common */
+
+/********** common **********/
 .wrap {width: 1250px; margin: 0 auto;}
 .clearfix::after {content: ''; display: block; clear: both;}
 .section {padding: 80px 0; background-color: #fff;}
 /*.section-title {font-family: 'Crimson Text', serif; font-weight: normal; font-size: 50px; letter-spacing: 5px;}*/
-.section-title {font-weight: 900; font-size: 50px; text-align: left; letter-spacing: 0.5px; margin-bottom: 30px;}
+.section-title {font-weight: 900; font-size: 50px; text-align: left; letter-spacing: 0.5px; margin-bottom: 30px; position: relative;}
+/********** common end **********/
 
 
-/* index video */
-#indexVideo {position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 100%;}
+/********************
+	인덱스 페이지
+********************/
+
+
+/********** index video **********/
+#indexVideo {position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow-x: hidden;}
 .indeximg {width: 100%; height: 100vh; background-image: url('../images/windyday.jpg'); background-repeat: no-repeat; position: relative; overflow: hidden;}
-.video-box {position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
-.video-box video {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%;}
-.darkfilter {position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.3); top: 0; left: 0;}
-.darkfilter img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.indeximg .video-box {position: absolute; width: 100%; height: 100%; top: 0; left: 0;}
+.indeximg .video-box video {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%;}
+.indeximg .darkfilter {position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.3); top: 0; left: 0;}
+/*.darkfilter img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}*/
+.indeximg .inner {width: 700px; height: 150px; position: absolute; top: 45%; left: calc((100% - 1250px) / 2); color: #fff; line-height: 1;}
+.indeximg .inner .name {font-size: 90px; display: block; position: absolute; top: -76px; left: -6px; /* transform: translate(-6px, 70px);*/ opacity: 0; animation-name: name; animation-delay: 1s; animation-duration: 1s; animation-fill-mode: forwards;}
+@keyframes name {
+	from {top: -40px; opacity: 0}
+	to {top: -76px; opacity: 0.95;}
+}
 
-.transparent {width: 100%; height: 100vh; background: transparent;}
+.indeximg .inner .line {display: block; width: 1000px; height: 2px; background: #fff; opacity: 0.6; position: absolute; left: -430px; /*transform: translateX(-430px);*/ /*position: relative;*/ transform-origin: left; animation-name: slidein; animation-duration: 1s;}
+/*.indeximg .inner .line::before {content: ''; width: 100%; height: 100%; background: #fff; position: absolute; top: 0; left: -100%;}*/
+@keyframes slidein {
+	from {transform: scaleX(0);}
+	to {transform: scaleX(1);}
+}
 
-/* header */
-/*.header {background: #f0f2f4; padding: 18px 0; height: 80px; width: 100%;}*/
+.indeximg .inner .porf {font-size: 30px; display: block; position: absolute; top: 13px; left: 0; opacity: 0; animation-name: porf; animation-delay: 1s; animation-duration: 1s; animation-fill-mode: forwards;}
+@keyframes porf {
+	from {top: 0; opacity: 0;}
+	to {top: 13px; opacity: 0.95;}
+}
+
+.indeximg .scr-down {position: absolute; z-index: 1; bottom: 90px; left: calc((100% - 1250px) / 2); color: #fff; display: inline-block; margin-top: 50px; font-size: 16px; letter-spacing: 1px; opacity: 0;
+	animation-name: scrdown; animation-delay: 2s; animation-duration: 2s; /*animation-iteration-count: infinite;*/ animation-fill-mode: forwards;}
+@keyframes scrdown {
+	from {opacity: 0;}
+	to {opacity: 0.9;}
+}
+
+.indeximg .scr-down i {animation-name: scrdownmove; animation-duration: 2s; transform: translateY(-1px); animation-iteration-count: infinite; animation-direction: alternate; transition-timing-function: ease-in-out;}
+@keyframes scrdownmove {
+	0%,50%,to {transform: translateY(-1px);}
+	25%,75% {transform: translateY(3px);}
+}
+
+.transparent {width: 100%; height: 100vh; background: transparent; position: relative; z-index: -1;}
+/********** index video end **********/
+
+#indexContent {position: relative; z-index: 1; background-color: #fff;}
+
+/********** header **********/
 .header {position: fixed; top: 0; left: 0; background: transparent; padding: 20px 0; height: 80px; width: 100%; color: #fff; transition: 0.3s; z-index: 990;}
 .header .logo {float: left;}
 .header .logo a {color: #fff; font-weight: 900;}
@@ -38,14 +80,16 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 .header.filled .logo a {color: #373b4f;}
 .header.filled .logo a:hover {color: #373b4f;}
 .header.filled .gnb li span {color: #373b4f;}
+/********** header end **********/
 
-/* portfolio */
+
+/********** portfolio **********/
 .portfolio {background-color: #f0f2f4; /*#3e59a8;*/}
 /*.portfolio .section-title {color: #fff;}*/
 .portfolio .portfolio-list::after {content: ''; display: block; clear: both;}
-.portfolio .portfolio-list .list-item {opacity: 0; float: left; width: 33.333%; padding: 10px; margin-bottom: 20px;}
-.portfolio .portfolio-list .list-item:nth-child(3n-2) {transform: translateX(-10px);}
-.portfolio .portfolio-list .list-item:nth-child(3n) {transform: translateX(10px);}
+.portfolio .portfolio-list .list-item {opacity: 1; float: left; width: 33.333%; padding: 10px; margin-bottom: 20px;}
+.portfolio .portfolio-list .list-item:nth-child(3n-2) {position: relative; left: -10px; /*transform: translateX(-10px);*/}
+.portfolio .portfolio-list .list-item:nth-child(3n) {position: relative; right: -10px; /*transform: translateX(10px);*/}
 .portfolio .portfolio-list .list-item .box {display: block; border-radius: 7px; overflow: hidden; transition: 0.3s;}
 .portfolio .portfolio-list .list-item:hover .box {transform: translateY(-10px); box-shadow: 0 0 20px rgba(45,56,89,0.4);}
 .portfolio .portfolio-list .list-item .img-area {width: 100%; position: relative; height: 260px; /*border: 1px solid #eee; border-bottom: 0; border-radius: 7px 7px 0 0; overflow: hidden;*/}
@@ -63,12 +107,13 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 .portfolio .portfolio-list .list-item:hover .text-area.game {background-color: #11adc2;}
 .portfolio .portfolio-list .list-item:hover .text-area.nowmv {background-color: #4b5465;}
 .portfolio .portfolio-list .list-item:hover .text-area.ranking {background-color: #df7d55;}
+/********** portfolio end **********/
 
 
-/* profile */
+/********** profile **********/
 .profile {background-color: #fafafa;}
 .profile h3 {font-size: 28px; font-weight: bold;}
-.profilewrap {opacity: 0;}
+/*.profilewrap {opacity: 0;}*/
 .profilewrap .my-picture {float: left; width: 33.333%; padding-right: 15px;}
 .profilewrap .my-picture .picwrap {width: 100%; border-radius: 7px; overflow: hidden;}
 .profilewrap .my-picture .picwrap img {width: 100%; display: block;}
@@ -79,21 +124,32 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 .profilewrap .my-info .profile-detail .desc {font-size: 16px;}
 .profilewrap .my-info .profile-detail .desc .date {color: #9d9db3; padding-right: 6px;}
 .profilewrap .my-info .profile-detail .desc .email {font-size: 25px;}
+/********** profile end **********/
 
 
-/* footer */
+/********** footer **********/
 .footer {background: #fff; border-top: 1px solid #eee; padding: 30px 0; text-align: center; font-size: 12px;}
 
 
-/** 반응형 **/
+/********** 반응형 **********/
 @media screen and (max-width: 1300px) {
 	.wrap {width: 990px}
+	
+	.indeximg .inner {left: calc((100% - 990px) / 2);}
+	.indeximg .inner .name {font-size: 80px; top: -67px;}
+	@keyframes name {
+		from {top: -31px; opacity: 0}
+		to {top: -67px; opacity: 0.95;}
+	}
+	.indeximg .inner .line {width: 935px;}
+	.indeximg .inner .porf {font-size: 26px; /*top: 9px;*/}
+	.indeximg .scr-down {left: calc((100% - 990px) / 2);}
 
 	.portfolio .portfolio-list .list-item {width: 50%; padding: 3px}
-	.portfolio .portfolio-list .list-item:nth-child(3n-2) {transform: translateX(0px);}
-	.portfolio .portfolio-list .list-item:nth-child(3n) {transform: translateX(0px);}
-	.portfolio .portfolio-list .list-item:nth-child(2n-1) {transform: translateX(-3px);}
-	.portfolio .portfolio-list .list-item:nth-child(2n) {transform: translateX(3px);}
+	.portfolio .portfolio-list .list-item:nth-child(3n-2) {left: 0;}
+	.portfolio .portfolio-list .list-item:nth-child(3n) {right: 0;}
+	.portfolio .portfolio-list .list-item:nth-child(2n-1) {left: -3px;}
+	.portfolio .portfolio-list .list-item:nth-child(2n) {right: -3px;}
 
 	.portfolio .portfolio-list .list-item .img-area {overflow: hidden;}
 	.portfolio .portfolio-list .list-item .img-area img {width: 100%;}
@@ -105,21 +161,37 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 @media screen and (max-width: 1030px) {
 	.wrap {width: 768px}
 
-	.portfolio .portfolio-list .list-item {margin-bottom: 10px;}
+	.indeximg .inner {left: calc((100% - 768px) / 2);}
+	.indeximg .scr-down {left: calc((100% - 768px) / 2);}
 
+	.portfolio .portfolio-list .list-item {margin-bottom: 10px;}
 	.portfolio .portfolio-list .list-item .img-area {height: 200px;}
 }
 
 @media screen and (max-width: 800px) {
 	.wrap {width: 98%;}
 
+	.indeximg .inner {left: 1%;}
+	.indeximg .inner .name {font-size: 60px; top: -50px; left: 0;}
+	@keyframes name {
+		from {top: -35px; opacity: 0}
+		to {top: -50px; opacity: 0.95;}
+	}
+	.indeximg .inner .line {width: 814px;}
+	.indeximg .inner .porf {font-size: 20px; top: 9px; left: 4px;}
+	@keyframes porf {
+		from {top: 0; opacity: 0;}
+		to {top: 9px; opacity: 0.95;}
+	}
+	.indeximg .scr-down {left: 1%;}
+
 	.section {padding: 40px 0;}
 
 	.section-title {font-size: 40px;}
 
 	.portfolio .portfolio-list .list-item {padding: 0; margin-bottom: 5px;}
-	.portfolio .portfolio-list .list-item:nth-child(2n-1) {transform: translateX(0); padding-right: 2px}
-	.portfolio .portfolio-list .list-item:nth-child(2n) {transform: translateX(0); padding-left: 2px;}
+	.portfolio .portfolio-list .list-item:nth-child(2n-1) {left: 0; padding-right: 2px}
+	.portfolio .portfolio-list .list-item:nth-child(2n) {right: 0; padding-left: 2px;}
 
 	.portfolio .portfolio-list .list-item:hover .box {transform: translateY(0);}
 
@@ -145,20 +217,32 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 
 @media screen and (max-width: 480px) {
 	.header .logo a {font-size: 20px;}
+
+	.indeximg .inner .name {font-size: 40px; top: -33px;}
+	@keyframes name {
+		from {top: -24px; opacity: 0}
+		to {top: -33px; opacity: 0.95;}
+	}
+	.indeximg .inner .line {width: 687px;}
 }
 
 
+/********************
+	서브 페이지
+********************/
 
-/*** 서브 페이지 ***/
-/* top image */
+
+/********** top image **********/
 .top-img {position: fixed; top: 0; left: 0; z-index: -1; width: 100%; height: 380px;}
 .top-img .imgwrap {position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
 .top-img .imgwrap img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .top-img .top-title {width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; font-weight: 800; color: #fff; text-align: center; text-shadow: 0 0 4px rgba(0,0,0,0.1);}
 
 .sub-transparent {width: 100%; height: 380px; background: transparent;}
+/********** top image end **********/
 
-/* content */
+
+/********** content **********/
 .navigation {color: #a5a8b6; /*font-weight: bold; */margin-bottom: 25px;}
 .navigation .back-btn {color: #a5a8b6;}
 .navigation .current-page {color: #373b4f;}
@@ -172,8 +256,10 @@ a:hover {color: #373b4f;/* #3e59a8;*/}
 .content .content-txt .shortcut .shortcut-btn {display: inline-block; width: 100%; margin-top: 10px; padding: 15px; border-radius: 7px; background-color: #3e59a8; color: #fff; text-align: center;}
 .content .content-scrshot {width: 70%; float: left;}
 .content .content-scrshot img {max-width: 100%; margin-bottom: 10px;}
+/********** content end **********/
 
-/** 반응형 **/
+
+/********** 반응형 **********/
 @media screen and (max-width: 800px) {
 	.top-img, .sub-transparent {height: 300px;}
 
